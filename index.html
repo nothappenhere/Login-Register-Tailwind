@@ -60,6 +60,8 @@
           // Memeriksa apakah pengguna ada dan kredensial cocok
           if (user && user.email === email && user.password === password) {
               document.getElementById('message').innerText = 'Login successful!';
+              document.getElementById('message').classList.remove('text-red-400');
+              document.getElementById('message').classList.add('text-green-400');
           } else {
               document.getElementById('message').innerText = 'Invalid email or password.';
               document.getElementById('message').classList.remove('text-green-400');
